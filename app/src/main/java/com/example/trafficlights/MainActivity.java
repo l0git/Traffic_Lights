@@ -11,23 +11,23 @@ import androidx.core.content.ContextCompat;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button button_yellow, button_red, button_green;
+    Button buttonYellow, buttonRed, buttonGreen;
     ConstraintLayout Screen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button_yellow = (Button)findViewById(R.id.button_yellow);
-        button_red = (Button)findViewById(R.id.button_red);
-        button_green = (Button)findViewById(R.id.button_green);
+        buttonYellow = (Button)findViewById(R.id.buttonYellow);
+        buttonRed = (Button)findViewById(R.id.buttonRed);
+        buttonGreen = (Button)findViewById(R.id.buttonGreen);
         Screen = findViewById(R.id.Screen);
-        button_yellow();
-        button_red();
-        button_green();
+        buttonYellow();
+        buttonRed();
+        buttonGreen();
     }
 
-    private void button_red() {
-        button_red.setOnClickListener(new View.OnClickListener() {
+    private void buttonRed() {
+        buttonRed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Screen.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.redColor));
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void button_yellow() {
-        button_yellow.setOnClickListener(new View.OnClickListener() {
+    private void buttonYellow() {
+        buttonYellow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Screen.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.yellowColor));
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void button_green() {
-        button_green.setOnClickListener(new View.OnClickListener() {
+    private void buttonGreen() {
+        buttonGreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Screen.setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.greenColor));
@@ -55,6 +55,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    
-    
 }
